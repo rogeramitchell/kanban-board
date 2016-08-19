@@ -1,0 +1,14 @@
+{
+  "name": "kanban-board",
+  "version": "1.0.0",
+  "description": "working on a project to create a kanban board similar to Trello, JIRA, Assembla; the ultimate goal is to have this pull data from Salesforce into a kanban board based on buckets from underlying data, where cards represent records in the database",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roger Mitchell (@RogerMitchell)",
+  "license": "ISC",
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.0.3"
+  }
+}
