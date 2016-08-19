@@ -1,0 +1,22 @@
+.slds-card {
+	display: inline-block;
+	width: 260px;
+	margin-top: 8px;
+	margin-right: 8px;
+	margin-left: 8px; 
+	box-shadow: 0 2px 2px gray;
+}
+.slds-card:hover {
+	box-shadow: 0 4px 6px;
+}
+.slds-card:active
+{
+	box-shadow: 0 8px 12px;
+}
+.ghost-card {
+	height: 137px;
+}
+.drop-zone {
+	border: #16325c !important;
+	border-style: dashed !important;
+}
