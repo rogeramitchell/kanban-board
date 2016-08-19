@@ -2,6 +2,9 @@
 
 Working on how to create a set of cards and columns in an attractive layout that allows users to view data in a kanban board / cardwall format. Users are able to drag cards with position between columns.
 
+## Current Version Demo
+![Current Demo GIF](assets/v1_demo.gif)
+
 ## Short Term Goals
 
 - Create a nice layout and experience as a static page
