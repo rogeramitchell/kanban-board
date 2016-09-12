@@ -20,3 +20,15 @@
 	border: #16325c !important;
 	border-style: dashed !important;
 }
+.container {
+	display: flex;
+	flex-direction: row;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.column-drop-zone {
+	background-color: lightblue;
+}

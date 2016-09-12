@@ -18,6 +18,11 @@ Working on how to create a set of cards and columns in an attractive layout that
 	- Column groupings
 	- Sort order of cards
 
+## Known Bugs
+
+1. Dragstart event not consistently bound to `article` (card), needs review
+1. 
+
 ### References
 
 From a Mozilla Foundation article about using the drag and drop API.
