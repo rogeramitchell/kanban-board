@@ -51,5 +51,6 @@ document.addEventListener("drop", function(event) {
 	} else if(event.target.classList.contains("column")) {
 		event.target.classList.remove("column-drop-zone");
 		droppedContents = event.target.insertAdjacentHTML('beforeend', draggedContents);
+		dragged.remove();
 	}
 });
