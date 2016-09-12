@@ -20,3 +20,11 @@
 	border: #16325c !important;
 	border-style: dashed !important;
 }
+.container {
+	display: flex;
+	flex-direction: row;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
