@@ -14,6 +14,35 @@
 		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
+		<!-- header with filters -->
+		<div class="slds-page-header" role="banner">
+			<div class="slds-grid">
+				<!-- Header Title -->
+				<div class="slds-col slds-has-flexi-truncate">
+					<div class="slds-media slds-no-space slds-grow">
+						<div class="slds-media__figure">
+							<svg aria-hidden="true" class="slds-icon slds-icon-standard-user">
+								<use xlink:href="node_modules/%40salesforce-ux/design-system/assets/icons/standard-sprite/svg/symbols.svg#user"></use>
+							</svg>
+						</div>
+						<div class="slds-media__body">
+							<p class="slds-text-title--caps slds-line-height--reset">Kanban View</p>
+							<h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate">Organize Your Tasks</h1>
+						</div>
+					</div>
+				</div>
+				<!-- Filter Bar -->
+				<div class="slds-col slds-no-flex slds-grid slds-align-top">
+				
+				</div>
+				<!-- Buttons -->
+				<div class="slds-col slds-no-flex slds-grid slds-align-top">
+					<button class="slds-button slds-button--neutral">Add New Task</button>
+					<button class="slds-button slds-button--neutral">Back to Salesforce</button>
+				</div>
+			</div>
+		</div>
+		<!-- cardwall + columns -->
 		<div class="container">
 			<div class="column">
 				<article class="slds-card slds-card--narrow" draggable="true">
