@@ -76,12 +76,107 @@ From a Mozilla Foundation article about using the drag and drop API.
       // prevent default action (open as link for some elements)
       event.preventDefault();
       // move dragged elem to the selected drop target
+          event.target.appendChild( dragged );
       if ( event.target.classList.contains("dropzone")) {
           event.target.style.background = "";
           dragged.parentNode.removeChild( dragged );
           //dragged.parentNode.classList.remove("thisThing");
-          event.target.appendChild( dragged );
       }
     
   }, false);
+```
+
+## Components
+
+**Card**
+```html
+<article class="slds-card slds-card--narrow" draggable="true">
+	<header class="slds-card__header slds-grid">
+		<div class="slds-media slds-media--center slds-has-flexi-truncate">
+			<div class="slds-media__body slds-truncate">
+				<h2>
+					<a href="javascript:void(0);" class="slds-text-link--reset">
+					<span class="slds-text-heading--small">Card Header 1</span>
+					</a>
+				</h2>
+			</div>
+		</div>
+		<div class="slds-no-flex">
+			<button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true">
+				&#x25BC;
+				<span class="slds-assistive-text">More Options</span>
+			</button>
+		</div>
+	</header>
+	<div class="slds-card__body slds-text-align--center">Card Body (custom goes in here)</div>
+	<div class="slds-card__footer">Card Footer</div>
+</article>
+```
+
+**Column**
+```html
+<div class="column">
+	<div class="column-header">
+		<h2 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate">Status 1</h2>
+	</div>
+</div>
+```
+
+## Functioning Webpack Config
+```js
+var webpack = require("webpack");
+
+module.exports = {
+	entry: ["./js/main.js", "./js/app.js"],
+	output: {
+		filename: "./build/bundle.js"
+	},
+
+	resolve: {
+		extensions: ["", ".js"]
+	},
+
+	module: {
+		loaders: [
+		  	{ 
+		  		test: /\.js$/,
+		  		exclude: "/node_modules/",
+		  		loader: "babel", 
+		  		query: { 
+		  			presets: ["es2015", "react"]
+		  		}
+		  	}
+		]
+	}
+};
+```
+
+## Functioning Package for Browser-Sync + Webpack
+```json
+{
+  "name": "kanban-board",
+  "version": "1.0.0",
+  "description": "working on a project to create a kanban board similar to Trello, JIRA, Assembla; the ultimate goal is to have this pull data from Salesforce into a kanban board based on buckets from underlying data, where cards represent records in the database",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files index.html css/*.css ",
+    "webpack": ""
+  },
+  "author": "Roger Mitchell (@RogerMitchell)",
+  "license": "ISC",
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.15.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "webpack": "^1.13.2"
+  }
+}
 ```
