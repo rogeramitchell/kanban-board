@@ -4,11 +4,24 @@
   "description": "working on a project to create a kanban board similar to Trello, JIRA, Assembla; the ultimate goal is to have this pull data from Salesforce into a kanban board based on buckets from underlying data, where cards represent records in the database",
   "main": "index.html",
   "scripts": {
+    "build-js": "browserify -t [babelify --presets [react] js/app.js js/main.js -o build/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Roger Mitchell (@RogerMitchell)",
   "license": "ISC",
   "dependencies": {
-    "@salesforce-ux/design-system": "^2.0.3"
+    "@salesforce-ux/design-system": "^2.0.3",
+    "babelify": "^7.3.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-util": "^3.0.7",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^1.13.2"
   }
 }
